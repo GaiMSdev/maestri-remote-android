@@ -50,24 +50,24 @@ jobs:
         name: release-apk
         path: app/build/outputs/apk/release/*.apk
 
+    - name: Download APK for Release
+      if: github.event_name == 'release'
+      run: |
+        mkdir -p release-artifacts
+        cp app/build/outputs/apk/debug/*.apk release-artifacts/maestri-remote-debug.apk || true
+        cp app/build/outputs/apk/release/*.apk release-artifacts/maestri-remote-release.apk || true
+
     - name: Create Release
       if: github.event_name == 'release'
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         files: |
-          app/build/outputs/apk/release/*.apk
-          app/build/outputs/apk/debug/*.apk
+          release-artifacts/*.apk
         body: |
-          ## Download the APK
-          
-          - **Maestri Remote (Release)** - For production use
-          - **Maestri Remote (Debug)** - For testing
-          
-          ### Installation
-          1. Download the APK to your Android device
-          2. Enable "Install from unknown sources" in Settings
-          3. Open the APK to install
-          
+          ## 📱 Download Maestri Remote
+
+          **Android APK** - Ready to install on your phone!
+
           Built from: ${{ github.sha }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
