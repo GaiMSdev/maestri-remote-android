@@ -18,6 +18,7 @@
 /* Begin PBXFileReference section */
 		0B440097853A52884460FC1B /* MaestriServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaestriServer.swift; sourceTree = "<group>"; };
 		1B2966251C7FE9EB8A4CD5D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DF9D921396C6CFE2D830290 /* MaestriBridge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MaestriBridge.entitlements; sourceTree = "<group>"; };
 		AAA3B5054777A22B4D3D3912 /* MaestriBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaestriBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B517840DB0C32C9099ABEECD /* MaestriCLI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaestriCLI.swift; sourceTree = "<group>"; };
 		D7DA49C723B6852BD7886332 /* WorkspaceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceParser.swift; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 			isa = PBXGroup;
 			children = (
 				1B2966251C7FE9EB8A4CD5D7 /* Assets.xcassets */,
+				5DF9D921396C6CFE2D830290 /* MaestriBridge.entitlements */,
 				E154BEB4110CACBECD161628 /* MaestriBridgeApp.swift */,
 				B517840DB0C32C9099ABEECD /* MaestriCLI.swift */,
 				0B440097853A52884460FC1B /* MaestriServer.swift */,
@@ -207,6 +209,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENTITLEMENTS_FILE = MaestriBridge/MaestriBridge.entitlements;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MaestriBridge;
 				INFOPLIST_KEY_LSUIElement = YES;
@@ -287,6 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENTITLEMENTS_FILE = MaestriBridge/MaestriBridge.entitlements;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MaestriBridge;
 				INFOPLIST_KEY_LSUIElement = YES;

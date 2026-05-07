@@ -32,3 +32,4 @@ targets:
         INFOPLIST_KEY_LSUIElement: YES
         INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Maestri Bridge needs local network access to communicate with the Android app."
         INFOPLIST_KEY_NSBonjourServices: "_maestri._tcp"
+        ENTITLEMENTS_FILE: MaestriBridge/MaestriBridge.entitlements
