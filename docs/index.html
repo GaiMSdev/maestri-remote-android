@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestri Remote - Control AI Agents from Your Phone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --border-color: rgba(255,255,255,0.1);
+            --glow: rgba(99, 102, 241, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(217, 70, 239, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .hero {
+            padding: 80px 0 100px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: var(--accent-primary);
+            margin-bottom: 24px;
+        }
+
+        .badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            box-shadow: 0 4px 24px var(--glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px var(--glow);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .phone-mockup {
+            margin: 60px auto;
+            max-width: 320px;
+            perspective: 1000px;
+        }
+
+        .phone-frame {
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            border-radius: 32px;
+            padding: 12px;
+            transform: rotateY(-5deg) rotateX(5deg);
+            box-shadow:
+                0 50px 100px rgba(0,0,0,0.5),
+                0 0 60px var(--glow);
+        }
+
+        .phone-screen {
+            background: var(--bg-secondary);
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 9/19;
+        }
+
+        .phone-content {
+            padding: 20px;
+            font-size: 0.75rem;
+        }
+
+        .phone-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .phone-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #22c55e;
+            font-size: 0.7rem;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: #22c55e;
+            border-radius: 50%;
+        }
+
+        .agent-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .agent-name {
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .agent-status {
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 100px;
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .terminal-preview {
+            background: #000;
+            border-radius: 8px;
+            padding: 8px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.55rem;
+            color: #a1a1aa;
+        }
+
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 48px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .download-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .download-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .download-card h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .download-card p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .version-info {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 24px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .github-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        .github-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .download-card {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg"></div>
+
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">M</div>
+                <span>Maestri Remote</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#download">Download</a>
+                <a href="https://github.com/GaiMSdev/maestri-remote-android" target="_blank">GitHub</a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="badge">Now Available for Android</div>
+            <h1>Control AI Agents<br>from Your Phone</h1>
+            <p class="subtitle">Monitor your Maestri AI agent canvas, view terminal output, send commands, and collaborate with notes - all from your Android device.</p>
+
+            <div class="cta-buttons">
+                <a href="#download" class="btn btn-primary">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    Download APK
+                </a>
+                <a href="https://github.com/GaiMSdev/maestri-remote-android" class="btn btn-secondary">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    View Source
+                </a>
+            </div>
+
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="phone-content">
+                            <div class="phone-header">
+                                <span style="font-weight: 600; font-size: 0.8rem;">Maestri Canvas</span>
+                                <div class="phone-status">
+                                    <span class="status-dot"></span>
+                                    Connected
+                                </div>
+                            </div>
+                            <div class="agent-card">
+                                <div class="agent-header">
+                                    <span class="agent-name">Claude Code</span>
+                                    <span class="agent-status">Running</span>
+                                </div>
+                                <div class="terminal-preview">
+$ git push origin main<br>
+> Building project...<br>
+✓ Done in 2.3s
+                                </div>
+                            </div>
+                            <div class="agent-card">
+                                <div class="agent-header">
+                                    <span class="agent-name">Gemini CLI</span>
+                                    <span class="agent-status" style="background: rgba(251, 191, 36, 0.2); color: #fbbf24;">Thinking</span>
+                                </div>
+                                <div class="terminal-preview">
+Processing 3 files...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <h2 class="section-title">Everything You Need</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>Watch all your AI agents in real-time. See their status, progress, and terminal output as it happens.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌨️</div>
+                    <h3>Terminal Control</h3>
+                    <p>Send commands to any agent directly from your phone. Full terminal input support with history.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Collaborative Notes</h3>
+                    <p>Read and edit sticky notes on the canvas. Share plans, track progress, and coordinate with your team.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Ombro AI Summaries</h3>
+                    <p>Get instant AI-generated summaries of what's happening across all agents and suggested next steps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>Auto-Discovery</h3>
+                    <p>Automatically finds Maestri on your local network via mDNS. Just tap Connect - no configuration needed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Offline Support</h3>
+                    <p>Continue browsing the last workspace state even when disconnected. Works in airplane mode.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-section" id="download">
+            <h2 class="section-title">Get Started</h2>
+            <div class="download-card">
+                <h2>Download Maestri Remote</h2>
+                <p>Connect your Android phone to your Maestri canvas running on Mac. Requires Maestri v1.0+ on Mac.</p>
+
+                <a href="https://github.com/GaiMSdev/maestri-remote-android/releases/latest" class="btn btn-primary">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                    Download APK (v1.0.0)
+                </a>
+
+                <div class="version-info">
+                    <span>Android 8.0+</span>
+                    <span>•</span>
+                    <span>Debug Build</span>
+                    <span>•</span>
+                    <span>~15 MB</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with ❤️ for the Maestri community</p>
+            <p style="margin-top: 8px;">
+                <a href="https://github.com/GaiMSdev/maestri-remote-android" class="github-link">GitHub</a>
+                •
+                <a href="https://github.com/GaiMSdev/maestri-remote-android/releases" class="github-link">Releases</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
