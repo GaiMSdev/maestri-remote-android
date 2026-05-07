@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FD42E7AB6DD7EE481E9D642 /* WorkspaceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DA49C723B6852BD7886332 /* WorkspaceParser.swift */; };
+		3B986A84DDB5B0A62E7FBFD0 /* MaestriServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B440097853A52884460FC1B /* MaestriServer.swift */; };
+		8AF1BE757A9215F264056CA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2966251C7FE9EB8A4CD5D7 /* Assets.xcassets */; };
+		C372DDE8913C18F4C81A39F8 /* MaestriCLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517840DB0C32C9099ABEECD /* MaestriCLI.swift */; };
+		EC42AD99D1F0C61AE421A8D0 /* MaestriBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154BEB4110CACBECD161628 /* MaestriBridgeApp.swift */; };
+		F3E70E99EC3B9E5FE2C8E4AE /* WorkspaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CFB6BED58DC69B58178B49 /* WorkspaceModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B440097853A52884460FC1B /* MaestriServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaestriServer.swift; sourceTree = "<group>"; };
+		1B2966251C7FE9EB8A4CD5D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAA3B5054777A22B4D3D3912 /* MaestriBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaestriBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B517840DB0C32C9099ABEECD /* MaestriCLI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaestriCLI.swift; sourceTree = "<group>"; };
+		D7DA49C723B6852BD7886332 /* WorkspaceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceParser.swift; sourceTree = "<group>"; };
+		E154BEB4110CACBECD161628 /* MaestriBridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaestriBridgeApp.swift; sourceTree = "<group>"; };
+		F5CFB6BED58DC69B58178B49 /* WorkspaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		4E6118EEC78E317699BB8B73 /* MaestriBridge */ = {
+			isa = PBXGroup;
+			children = (
+				1B2966251C7FE9EB8A4CD5D7 /* Assets.xcassets */,
+				E154BEB4110CACBECD161628 /* MaestriBridgeApp.swift */,
+				B517840DB0C32C9099ABEECD /* MaestriCLI.swift */,
+				0B440097853A52884460FC1B /* MaestriServer.swift */,
+				F5CFB6BED58DC69B58178B49 /* WorkspaceModel.swift */,
+				D7DA49C723B6852BD7886332 /* WorkspaceParser.swift */,
+			);
+			path = MaestriBridge;
+			sourceTree = "<group>";
+		};
+		76301B59628EB1FD68A9EA1B = {
+			isa = PBXGroup;
+			children = (
+				4E6118EEC78E317699BB8B73 /* MaestriBridge */,
+				F276C551FB2BCFD070A02DD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F276C551FB2BCFD070A02DD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAA3B5054777A22B4D3D3912 /* MaestriBridge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F9F3E7AAF06534B1AF25482 /* MaestriBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5659490794D17769B8DEF3E6 /* Build configuration list for PBXNativeTarget "MaestriBridge" */;
+			buildPhases = (
+				4A2127EB93E789D0CDF30D17 /* Sources */,
+				A19BC8AD89A72C8BD6A0572F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaestriBridge;
+			packageProductDependencies = (
+			);
+			productName = MaestriBridge;
+			productReference = AAA3B5054777A22B4D3D3912 /* MaestriBridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		220D1BC77BDA87058CE0841A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					0F9F3E7AAF06534B1AF25482 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A42FF1C6E37AD5B0D7E29E9D /* Build configuration list for PBXProject "MaestriBridge" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 76301B59628EB1FD68A9EA1B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F276C551FB2BCFD070A02DD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F9F3E7AAF06534B1AF25482 /* MaestriBridge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A19BC8AD89A72C8BD6A0572F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AF1BE757A9215F264056CA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A2127EB93E789D0CDF30D17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC42AD99D1F0C61AE421A8D0 /* MaestriBridgeApp.swift in Sources */,
+				C372DDE8913C18F4C81A39F8 /* MaestriCLI.swift in Sources */,
+				3B986A84DDB5B0A62E7FBFD0 /* MaestriServer.swift in Sources */,
+				F3E70E99EC3B9E5FE2C8E4AE /* WorkspaceModel.swift in Sources */,
+				1FD42E7AB6DD7EE481E9D642 /* WorkspaceParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8D99A5228DDC27ABA97AD439 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		963736EF7D71A61E5A33A90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MaestriBridge;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBonjourServices = _maestri._tcp;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Maestri Bridge needs local network access to communicate with the Android app.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.maestri.bridge;
+				PRODUCT_NAME = MaestriBridge;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9F7F9325F08F72CA53DC1D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		DC5190134EADC97BF0FA63AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MaestriBridge;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBonjourServices = _maestri._tcp;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Maestri Bridge needs local network access to communicate with the Android app.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.maestri.bridge;
+				PRODUCT_NAME = MaestriBridge;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5659490794D17769B8DEF3E6 /* Build configuration list for PBXNativeTarget "MaestriBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				963736EF7D71A61E5A33A90E /* Debug */,
+				DC5190134EADC97BF0FA63AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A42FF1C6E37AD5B0D7E29E9D /* Build configuration list for PBXProject "MaestriBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D99A5228DDC27ABA97AD439 /* Debug */,
+				9F7F9325F08F72CA53DC1D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 220D1BC77BDA87058CE0841A /* Project object */;
+}

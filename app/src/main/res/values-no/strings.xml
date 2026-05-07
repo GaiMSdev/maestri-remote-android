@@ -1,0 +1,125 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">Maestri Remote</string>
+    <string name="app_version">Maestri Remote v1.0.0</string>
+
+    <!-- Connection States -->
+    <string name="connection_connected">Tilkoblet</string>
+    <string name="connection_disconnected">Frakoblet — viser sist kjente tilstand</string>
+    <string name="connection_discovering">Søker etter Maestri på Mac…</string>
+    <string name="connection_connecting">Kobler til…</string>
+    <string name="connection_reconnecting">Gjenoppretter (Forsøk %1$d) — %2$s</string>
+    <string name="connection_stale">%1$s</string>
+    <string name="last_sync_just_now">Sist oppdatert akkurat nå</string>
+    <string name="last_sync_minutes">Sist oppdatert %1$d min siden</string>
+    <string name="last_sync_hour">Sist oppdatert over en time siden</string>
+    <string name="reconnect">Koble til på nytt</string>
+
+    <!-- Canvas Screen -->
+    <string name="canvas_title">Maestri Canvas</string>
+    <string name="notes">Notater</string>
+    <string name="settings">Innstillinger</string>
+    <string name="disconnect">Koble fra</string>
+    <string name="connect">Koble til</string>
+    <string name="more_options">Flere alternativer</string>
+    <string name="kill_all_agents">Stopp alle agenter</string>
+    <string name="kill_all_confirm_title">Stoppe alle agenter?</string>
+    <string name="kill_all_confirm_text">Dette vil stoppe alle aktive agent-noder i denne arbeidsflaten umiddelbart.</string>
+    <string name="fix_issues">Fiks problemer</string>
+    <string name="connect_to_mac">Koble til Mac</string>
+    <string name="enter_pin_description">Skriv inn den 6-sifrede PIN-koden som vises på Mac-en.</string>
+    <string name="pin_label">6-sifret PIN</string>
+    <string name="syncing_workspace">Synkroniserer arbeidsflate…</string>
+    <string name="connect_to_maestri">Koble til Maestri</string>
+    <string name="connect_instructions">Åpne Maestri på Mac-en og trykk på PIN-knappen for å få en 6-sifret kode.</string>
+
+    <!-- Workspace Summary -->
+    <string name="workspace_summary">Arbeidsflateoversikt</string>
+    <string name="active_agents">%1$d Aktive</string>
+    <string name="total_cost">Total kostnad: %1$.2f %2$s</string>
+
+    <!-- Agent Card -->
+    <string name="open_terminal">Åpne terminal</string>
+    <string name="stop_agent">Stopp agent</string>
+    <string name="restart_agent">Start på nytt</string>
+    <string name="burn_rate">Forbruk</string>
+    <string name="approve">Godkjenn</string>
+    <string name="reject">Avvis</string>
+    <string name="connections">↔ %1$d</string>
+
+    <!-- Terminal -->
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_disconnected">Frakoblet</string>
+    <string name="terminal_readonly">Skrivebeskyttet</string>
+    <string name="terminal_placeholder">Skriv kommando…</string>
+    <string name="send">Send</string>
+    <string name="copy_line">Kopier</string>
+
+    <!-- Ombro -->
+    <string name="ombro_title">Ombro</string>
+    <string name="ombro_subtitle">AI arbeidsflate-overvåker</string>
+    <string name="ombro_refresh">Oppdater sammendrag</string>
+    <string name="ombro_no_summary">Ingen sammendrag tilgjengelig. Dra ned for å oppdatere eller vent på neste oppdatering.</string>
+    <string name="ombro_next_steps">Neste steg</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Innstillinger</string>
+    <string name="back">Tilbake</string>
+    <string name="security_section">Sikkerhet</string>
+    <string name="pin_label_settings">Maestri tilkoblings-PIN</string>
+    <string name="pin_supporting">Den 6-sifrede PIN-koden som vises på Mac-en</string>
+    <string name="save_pin">Lagre PIN</string>
+    <string name="biometric_lock">Biometrisk lås</string>
+    <string name="biometric_description">Krev biometrisk autentisering for å koble til</string>
+    <string name="haptic_heartbeat">Haptisk hjerteslag</string>
+    <string name="haptic_description">Vibrer ved endringer i agent-status</string>
+    <string name="auto_approve">Auto-godkjenn forespørsler</string>
+    <string name="auto_approve_description">Agenter vil bekrefte beslutninger uten å spørre</string>
+    <string name="auto_approve_warning">Advarsel: Agenter vil automatisk bekrefte alle beslutninger. Dette kan føre til uventede kostnader eller tap av data.</string>
+    <string name="voice_commands_section">Stemmekommandoer</string>
+    <string name="voice_commands_description">Håndter utløsere og terminal-snarveier</string>
+    <string name="clear_settings">Tilbakestill alle innstillinger og koble fra</string>
+
+    <!-- Voice Settings -->
+    <string name="voice_title">Stemmekommandoer</string>
+    <string name="add_shortcut">Legg til snarvei</string>
+    <string name="your_shortcuts">Dine snarveier</string>
+    <string name="no_shortcuts">Ingen snarveier ennå. Legg til en for å komme i gang!</string>
+    <string name="gemini_integration">Gemini-integrasjon</string>
+    <string name="gemini_description">Aktiver Gemini Nano på enheten for smartere stemmebehandling</string>
+    <string name="trigger_phrase">Utløserfrase</string>
+    <string name="terminal_command">Terminalkommando</string>
+    <string name="delete">Slett</string>
+    <string name="add_voice_title">Legg til stemmesnarvei</string>
+    <string name="add">Legg til</string>
+    <string name="cancel">Avbryt</string>
+
+    <!-- Notes -->
+    <string name="loading">Laster…</string>
+    <string name="save">Lagre</string>
+
+    <!-- Voice Command Responses -->
+    <string name="voice_no_workspace">Ingen aktiv arbeidsflate.</string>
+    <string name="voice_no_failing">Ingen feilende agenter funnet.</string>
+    <string name="voice_restarting">Starter %1$d feilende agenter på nytt.</string>
+    <string name="voice_stopping">Stopper alle agenter.</string>
+    <string name="voice_active_agents">Du har %1$d aktive agenter.</string>
+    <string name="voice_unrecognized">Jeg forstod: \'%1$s\', men jeg vet ikke hvordan jeg skal utføre det ennå.</string>
+
+    <!-- Agent Types -->
+    <string name="agent_claude_code">Claude Code</string>
+    <string name="agent_codex">Codex</string>
+    <string name="agent_gemini">Gemini</string>
+    <string name="agent_shell">Shell</string>
+    <string name="agent_unknown">Ukjent</string>
+
+    <!-- Status -->
+    <string name="status_idle">INAKTIV</string>
+    <string name="status_running">KJØRER</string>
+    <string name="status_waiting">VENTER</string>
+    <string name="status_done">FERDIG</string>
+    <string name="status_error">FEIL</string>
+    <string name="status_needs_input">TRENGER INPUT</string>
+    <string name="tokens_per_min">%1$d t/min</string>
+    <string name="cost_format">%1$s %2$.2f</string>
+</resources>

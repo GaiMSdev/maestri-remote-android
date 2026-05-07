@@ -1,0 +1,125 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">Maestri Remote</string>
+    <string name="app_version">Maestri Remote v1.0.0</string>
+
+    <!-- Connection States -->
+    <string name="connection_connected">Verbunden</string>
+    <string name="connection_disconnected">Getrennt — zeigt letzten bekannten Zustand</string>
+    <string name="connection_discovering">Suche nach Maestri auf Mac…</string>
+    <string name="connection_connecting">Verbindung wird hergestellt…</string>
+    <string name="connection_reconnecting">Verbindung wird wiederhergestellt (Versuch %1$d) — %2$s</string>
+    <string name="connection_stale">%1$s</string>
+    <string name="last_sync_just_now">Gerade aktualisiert</string>
+    <string name="last_sync_minutes">Vor %1$d Min. aktualisiert</string>
+    <string name="last_sync_hour">Vor über einer Stunde aktualisiert</string>
+    <string name="reconnect">Erneut verbinden</string>
+
+    <!-- Canvas Screen -->
+    <string name="canvas_title">Maestri Canvas</string>
+    <string name="notes">Notizen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="disconnect">Trennen</string>
+    <string name="connect">Verbinden</string>
+    <string name="more_options">Weitere Optionen</string>
+    <string name="kill_all_agents">Alle Agenten beenden</string>
+    <string name="kill_all_confirm_title">Alle Agenten beenden?</string>
+    <string name="kill_all_confirm_text">Dies stoppt sofort alle aktiven Agentenknoten in diesem Arbeitsbereich.</string>
+    <string name="fix_issues">Probleme beheben</string>
+    <string name="connect_to_mac">Mit Mac verbinden</string>
+    <string name="enter_pin_description">Geben Sie den 6-stelligen PIN-Code ein, der auf Ihrem Mac angezeigt wird.</string>
+    <string name="pin_label">6-stelliger PIN</string>
+    <string name="syncing_workspace">Arbeitsbereich wird synchronisiert…</string>
+    <string name="connect_to_maestri">Mit Maestri verbinden</string>
+    <string name="connect_instructions">Öffnen Sie Maestri auf Ihrem Mac und tippen Sie auf die PIN-Schaltfläche, um einen 6-stelligen Code zu erhalten.</string>
+
+    <!-- Workspace Summary -->
+    <string name="workspace_summary">Arbeitsbereich-Übersicht</string>
+    <string name="active_agents">%1$d Aktiv</string>
+    <string name="total_cost">Gesamtkosten: %1$.2f %2$s</string>
+
+    <!-- Agent Card -->
+    <string name="open_terminal">Terminal öffnen</string>
+    <string name="stop_agent">Agent beenden</string>
+    <string name="restart_agent">Neustarten</string>
+    <string name="burn_rate">Verbrauch</string>
+    <string name="approve">Genehmigen</string>
+    <string name="reject">Ablehnen</string>
+    <string name="connections">↔ %1$d</string>
+
+    <!-- Terminal -->
+    <string name="terminal_title">Terminal</string>
+    <string name="terminal_disconnected">Getrennt</string>
+    <string name="terminal_readonly">Nur-Lesen-Modus</string>
+    <string name="terminal_placeholder">Befehl eingeben…</string>
+    <string name="send">Senden</string>
+    <string name="copy_line">Kopieren</string>
+
+    <!-- Ombro -->
+    <string name="ombro_title">Ombro</string>
+    <string name="ombro_subtitle">KI-Arbeitsbereich-Monitor</string>
+    <string name="ombro_refresh">Zusammenfassung aktualisieren</string>
+    <string name="ombro_no_summary">Keine Zusammenfassung verfügbar. Ziehen Sie zum Aktualisieren oder warten Sie auf das nächste Update.</string>
+    <string name="ombro_next_steps">Nächste Schritte</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Einstellungen</string>
+    <string name="back">Zurück</string>
+    <string name="security_section">Sicherheit</string>
+    <string name="pin_label_settings">Maestri-Verbindungs-PIN</string>
+    <string name="pin_supporting">Der 6-stellige PIN-Code, der auf Ihrem Mac angezeigt wird</string>
+    <string name="save_pin">PIN speichern</string>
+    <string name="biometric_lock">Biometrische Sperre</string>
+    <string name="biometric_description">Biometrische Authentifizierung zum Verbinden erforderlich</string>
+    <string name="haptic_heartbeat">Haptischer Herzschlag</string>
+    <string name="haptic_description">Bei Änderungen des Agentenstatus vibrieren</string>
+    <string name="auto_approve">Anfragen automatisch genehmigen</string>
+    <string name="auto_approve_description">Agenten bestätigen Entscheidungen ohne zu fragen</string>
+    <string name="auto_approve_warning">Warnung: Agenten werden automatisch alle Entscheidungen bestätigen. Dies kann zu unerwarteten Kosten oder Datenverlust führen.</string>
+    <string name="voice_commands_section">Sprachbefehle</string>
+    <string name="voice_commands_description">Auslöser und Terminal-Verknüpfungen verwalten</string>
+    <string name="clear_settings">Alle Einstellungen löschen und trennen</string>
+
+    <!-- Voice Settings -->
+    <string name="voice_title">Sprachbefehle</string>
+    <string name="add_shortcut">Verknüpfung hinzufügen</string>
+    <string name="your_shortcuts">Ihre Verknüpfungen</string>
+    <string name="no_shortcuts">Noch keine Verknüpfungen. Fügen Sie eine hinzu!</string>
+    <string name="gemini_integration">Gemini-Integration</string>
+    <string name="gemini_description">Geräteinternes Gemini Nano für intelligentere Sprachverarbeitung aktivieren</string>
+    <string name="trigger_phrase">Auslösephrase</string>
+    <string name="terminal_command">Terminalbefehl</string>
+    <string name="delete">Löschen</string>
+    <string name="add_voice_title">Sprachverknüpfung hinzufügen</string>
+    <string name="add">Hinzufügen</string>
+    <string name="cancel">Abbrechen</string>
+
+    <!-- Notes -->
+    <string name="loading">Wird geladen…</string>
+    <string name="save">Speichern</string>
+
+    <!-- Voice Command Responses -->
+    <string name="voice_no_workspace">Kein aktiver Arbeitsbereich.</string>
+    <string name="voice_no_failing">Keine fehlgeschlagenen Agenten gefunden.</string>
+    <string name="voice_restarting">%1$d fehlgeschlagene Agenten werden neu gestartet.</string>
+    <string name="voice_stopping">Alle Agenten werden gestoppt.</string>
+    <string name="voice_active_agents">Sie haben %1$d aktive Agenten.</string>
+    <string name="voice_unrecognized">Ich habe \'%1$s\' verstanden, aber ich weiß noch nicht, wie ich das ausführen soll.</string>
+
+    <!-- Agent Types -->
+    <string name="agent_claude_code">Claude Code</string>
+    <string name="agent_codex">Codex</string>
+    <string name="agent_gemini">Gemini</string>
+    <string name="agent_shell">Shell</string>
+    <string name="agent_unknown">Unbekannt</string>
+
+    <!-- Status -->
+    <string name="status_idle">INAKTIV</string>
+    <string name="status_running">LÄUFT</string>
+    <string name="status_waiting">WARTET</string>
+    <string name="status_done">FERTIG</string>
+    <string name="status_error">FEHLER</string>
+    <string name="status_needs_input">BRAUCHT EINGABE</string>
+    <string name="tokens_per_min">%1$d t/min</string>
+    <string name="cost_format">%1$s %2$.2f</string>
+</resources>

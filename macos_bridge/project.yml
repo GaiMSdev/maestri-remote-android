@@ -1,0 +1,34 @@
+name: MaestriBridge
+
+options:
+  bundleIdPrefix: app.maestri
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "15.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  MaestriBridge:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: MaestriBridge
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.maestri.bridge
+        PRODUCT_NAME: MaestriBridge
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: MaestriBridge
+        INFOPLIST_KEY_LSUIElement: YES
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Maestri Bridge needs local network access to communicate with the Android app."
+        INFOPLIST_KEY_NSBonjourServices: "_maestri._tcp"
